@@ -2,7 +2,7 @@
 Android UI about custom toolbar
 
 ###Effect:
-
+![横屏](./screen/scr.jpg "横屏")
 ![白天](./screen/day.gif "白天")
 ![夜晚](./screen/night.gif "夜晚")
 
