@@ -2,6 +2,7 @@
 Android UI about custom toolbar
 
 ###Effect:
+
 ![白天](./screen/day.gif "白天")
 ![夜晚](./screen/night.gif "夜晚")
 
