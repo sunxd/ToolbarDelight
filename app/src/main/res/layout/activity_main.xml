@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_background">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <FrameLayout
+                    android:id="@+id/collapsing_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:layout_collapseMode="pin">
+
+                    <com.sunxd.td.widget.ToolbarArcBackground
+                        android:id="@+id/toolbarArcBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/content_blue" />
+
+                </FrameLayout>
+
+                <com.sunxd.td.widget.NonClickableToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="24dp" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <!-- Here's some views of the app logic -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="96dp"
+                android:orientation="vertical">
+
+
+                <FrameLayout android:layout_gravity="center_horizontal"
+                    android:id="@+id/mainContent"
+                    android:paddingTop="48.0dip"
+                    android:layout_width="fill_parent"
+                    android:background="@color/content_background"
+                    android:layout_height="300.0dip">
+
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="54.0dip"
+                        android:layout_marginTop="20.0dip"
+                        android:src="@drawable/bg_cloud_04_copy" />
+
+                    <ImageView
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.0dip"
+                        android:layout_marginRight="30.0dip"
+                        android:src="@drawable/bg_cloud_01_copy" />
+
+                    <ImageView android:layout_gravity="bottom|left|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/bg_image_left_offset"
+                        android:src="@drawable/bg_city" />
+
+                    <ImageView android:layout_gravity="bottom|right|center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/bg_image_right_offset"
+                        android:src="@drawable/bg_nature" />
+
+                    <ImageView android:id="@+id/baloon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_baloon" />
+
+                    <ImageView android:id="@+id/ivWalkingMan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:src="@drawable/walking_man_animation"/>
+
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_marginTop="196dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ob_chart"/>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="24dp"
+        android:background="#00000000"
+        android:elevation="0dp">
+
+        <FrameLayout
+            android:layout_gravity="right"
+            android:id="@+id/profileClickTarget"
+            android:layout_width="64.0dip"
+            android:layout_height="fill_parent"
+            android:foreground="?android:selectableItemBackground">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="right|center"
+                android:id="@+id/profilePicture"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_marginRight="20.0dip"
+                android:src="@drawable/ic_account_circle_black"
+                android:transitionName="profile" />
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+</FrameLayout>

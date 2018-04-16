@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/walking_man_01" />
+    <item android:duration="80" android:drawable="@drawable/walking_man_02" />
+    <item android:duration="100" android:drawable="@drawable/walking_man_03" />
+    <item android:duration="100" android:drawable="@drawable/walking_man_04" />
+    <item android:duration="120" android:drawable="@drawable/walking_man_05" />
+    <item android:duration="83" android:drawable="@drawable/walking_man_06" />
+</animation-list>
